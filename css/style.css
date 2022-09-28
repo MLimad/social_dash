@@ -142,6 +142,10 @@ nav hr.line{
     padding: 15px;
     margin: 1%;
     background-color: var(--card-bg);
+    transition: 0.4s;
+}
+.card:hover{
+    background-color: rgb(209, 214, 241);
 }
 .card::before{
     content: "";
@@ -182,7 +186,6 @@ nav hr.line{
     letter-spacing: 3px;
     margin: 0;
     font-size: 14px;
-    font-weight: bold;
     
 }
 .card .followers  h3{
@@ -221,6 +224,10 @@ nav hr.line{
     color: var(--text-blue);
     margin: 1%;
     margin-bottom: 15px;
+    transition: 0.4s;
+}
+.card-overview:hover{
+    background-color: rgb(209, 214, 241);
 }
 
 .card-overview .actions ,.card-overview .stats{
@@ -284,4 +291,8 @@ nav hr.line{
 
 .dark .card .social,.dark .card-overview .action{
     color: var(--text-white-dark);
+}
+
+.dark .card:hover ,.dark .card-overview:hover{
+    background-color: hsl(229.7, 36.1%, 19%);
 }
