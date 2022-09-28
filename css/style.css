@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --lime-green:hsl(163, 72%, 41%);
+    --bright-red:hsl(356, 69%, 56%);
+    /* Social Media */
+    --facebook:hsl(208, 92%, 53%);
+    --twitter:hsl(203, 89%, 53%);
+    --instagram:linear-gradient(to right ,hsl(37, 97%, 70%),hsl(329, 70%, 58%));
+    --youtube:hsl(348, 97%, 39%);
+    /* Toggle Button */
+    --toggle-dark-theme:linear-gradient(to right, hsl(210, 78%, 56%) ,hsl(146, 68%, 55%));
+    --toggle-light-theme:hsl(230, 22%, 74%);
+    /* Dark Theme */
+    --bg-dark:hsl(230, 17%, 14%);
+    --top-bg-dark:hsl(232, 19%, 15%);
+    --card-bg-dark:hsl(228, 28%, 20%);
+    --text-dark:hsl(228, 34%, 66%);
+    --text-white-dark:hsl(0, 0%, 100%);
+     /* light Theme */
+     --bg:hsl(0, 0%, 100%);
+     --top-bg:hsl(225, 100%, 98%);
+     --card-bg:hsl(227, 47%, 96%);
+     --text:hsl(228, 12%, 44%);
+     --text-blue:hsl(230, 17%, 14%);
+
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom , hsl(225, 100%, 98%),hsl(225, 100%, 98%) 35%, hsl(0, 0%, 100%) 35%,hsl(0, 0%, 100%));
+    font-family: 'Inter', sans-serif;
+}
+/* =================== Nav ================= */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 20px 0;
+}
+
+.form-switch {
+    padding-left: 0;
+  }
+.form-check.form-switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media only screen and (max-width: 991px) {
+   
+    .form-check.form-switch{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        flex-direction: row;
+    }
+  }
+
+@media only screen and (max-width: 991px) {
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+  }
+
+nav input[type="checkbox"]{
+    background: var(--toggle-light-theme) !important;
+    background-image: unset !important;
+    padding: 15px 30px;
+    border: unset;
+    outline: unset;
+    position: relative;
+}
+
+nav input[type="checkbox"]::before {
+	content: "";
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: white;
+	top: 2px;
+	left: 3px;
+    transform: translateX(0);
+    transition: 0.5s;
+}
+
+
+nav label {
+	margin-right: 54px;
+    font-weight: bold;
+    color: var(--text);
+}
+
+nav .heading h1{
+    font-weight: bold;
+    margin: 0;
+    font-size: 30px;
+}
+@media only screen and (max-width: 991px) {
+    nav .heading h1{
+        font-size: 25px;
+    }
+  }
+nav .heading p{
+    text-transform: capitalize;
+    color: var(--text);
+    font-weight: bold;
+}
+
+nav hr.line{
+    display: none;
+}
+@media only screen and (max-width: 991px) {
+    nav hr.line {
+        display: block;
+        width: 100%;
+        border: 1px solid var(--text);
+        border-radius: 6px;
+
+    }
+  }
+
+/* =================== Cards ================= */
+.card{
+    position: relative;
+    border: unset;
+    box-sizing: 6px;
+    text-align: center;
+    padding: 15px;
+    margin: 1%;
+    background-color: var(--card-bg);
+}
+.card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: red;
+}
+
+.facebook::before{
+    background: var(--facebook);
+}
+
+.twitter::before{
+    background: var(--twitter);
+}
+.instagram:before{
+    background: var(--instagram);
+}
+.youtube:before{
+    background: var(--youtube);
+}
+
+
+.card .social{
+    color: var(--text-blue);
+    font-weight: bold;
+    font-size: 14px;
+}
+.card .followers{
+    margin: 20px;
+}
+.card .followers p{
+    text-transform: uppercase;
+    color: var(--bright-red);
+    letter-spacing: 3px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+.card .followers  h3{
+    font-weight: bold;
+    font-size: 50px;
+    margin: 0;
+    color: var(--text-blue);
+}
+
+.card .state{
+    
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.card .state.up{
+    color: var(--lime-green);
+}
+.card .state.down{
+    color: var(--bright-red);
+}
+
+/* Overviews */
+
+.overview-title {
+	margin: 15px 0 10px;
+	font-size: 20px;
+	font-weight: bold;
+	color: var(--text);
+}
+
+.card-overview{
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 6px;
+    color: var(--text-blue);
+    margin: 1%;
+    margin-bottom: 15px;
+}
+
+.card-overview .actions ,.card-overview .stats{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+.card-overview .stats{
+    padding-top: 10px;
+}
+
+.card-overview .action{
+    font-size: 14px;
+    color: var(--text);
+}
+
+.card-overview .count{
+    font-size: 30px;
+}
+
+
+.card-overview .up{
+    color: var(--lime-green);
+    font-size: 14px;
+}
+
+.card-overview .down{
+    color: var(--bright-red);
+    font-size: 14px;
+}
+
+
+/* Dark Theme */
+
+.dark{
+    
+    background: linear-gradient(to bottom , hsl(232, 19%, 15%),hsl(232, 19%, 15%) 35%, hsl(230, 17%, 14%) 35%,hsl(230, 17%, 14%));
+}
+.dark nav .heading{
+    color: var(--text-white-dark);
+}
+
+.dark nav input[type="checkbox"]{
+    background: var(--toggle-dark-theme) !important;
+}
+
+.dark nav input[type="checkbox"]::before {
+	transform: translateX(30px);
+	
+}
+
+.dark .card ,.dark .card-overview{
+    background-color: var(--card-bg-dark);
+    color: var(--text-dark);
+}
+
+.dark .card h3{
+    color: var(--text-dark);
+}
+
+.dark .card .social,.dark .card-overview .action{
+    color: var(--text-white-dark);
+}
